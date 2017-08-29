@@ -14,6 +14,7 @@
 		3A6D34AC1F549ED600FA5453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6D34AA1F549ED600FA5453 /* LaunchScreen.storyboard */; };
 		3A6D34B71F549ED600FA5453 /* S2L16___AgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D34B61F549ED600FA5453 /* S2L16___AgeTests.swift */; };
 		3A6D34C21F549ED600FA5453 /* S2L16___AgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D34C11F549ED600FA5453 /* S2L16___AgeUITests.swift */; };
+		3A6D34D31F55CFE000FA5453 /* Baby_Hedgehog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A6D34D21F55CFE000FA5453 /* Baby_Hedgehog.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3A6D34BD1F549ED600FA5453 /* S2L16 - AgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "S2L16 - AgeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6D34C11F549ED600FA5453 /* S2L16___AgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "S2L16___AgeUITests.swift"; sourceTree = "<group>"; };
 		3A6D34C31F549ED600FA5453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A6D34D21F55CFE000FA5453 /* Baby_Hedgehog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Baby_Hedgehog.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		3A6D34A01F549ED600FA5453 /* S2L16 - Age */ = {
 			isa = PBXGroup;
 			children = (
+				3A6D34D21F55CFE000FA5453 /* Baby_Hedgehog.jpg */,
 				3A6D34A11F549ED600FA5453 /* AppDelegate.swift */,
 				3A6D34A31F549ED600FA5453 /* ViewController.swift */,
 				3A6D34A51F549ED600FA5453 /* Main.storyboard */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6D34D31F55CFE000FA5453 /* Baby_Hedgehog.jpg in Resources */,
 				3A6D34AC1F549ED600FA5453 /* LaunchScreen.storyboard in Resources */,
 				3A6D34A91F549ED600FA5453 /* Assets.xcassets in Resources */,
 				3A6D34A71F549ED600FA5453 /* Main.storyboard in Resources */,
