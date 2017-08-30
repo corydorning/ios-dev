@@ -7,7 +7,7 @@ var number: Int?
 
 print(number)
 
-let userEnteredText = "3"
+let userEnteredText = "three"
 let userEnteredInt = Int(userEnteredText)
 
 // ! will 'unwrap' userEnteredInt and work as long
