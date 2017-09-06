@@ -8,16 +8,13 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var item: UITextField!
     
     @IBAction func addItem(_ sender: Any) {
         
         // if text field isn't blank
         if item.text != "" {
-            // store new item
-            let newItem = item.text
-            
             // get current items
             let defaultsTodoArray = UserDefaults.standard.array(forKey: "todo")
             
@@ -30,14 +27,23 @@ class SecondViewController: UIViewController {
             }
             
             // append new item to list
-            newTodoArray.append(newItem!)
+            newTodoArray.append(item.text!)
             
             // save list as default
             UserDefaults.standard.set(newTodoArray, forKey: "todo")
+            
+            // reset text field
+            item.text = ""
         }
+    }
+    
+    // closes keyboard when return is pressed
+    // make sure to drag text field in the storyboard to the ViewController icon and click Delegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // closes keyboard
+        textField.resignFirstResponder()
         
-        // reset text field
-        item.text = ""
+        return true
     }
     
     
@@ -53,15 +59,6 @@ class SecondViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-    }
-    
-    // closes keyboard when return is pressed
-    // make sure to drag text field in the storyboard to the ViewController icon and click Delegate
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // closes keyboard
-        textField.resignFirstResponder()
-        
-        return true
     }
 
 }

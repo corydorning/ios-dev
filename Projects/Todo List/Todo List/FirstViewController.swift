@@ -11,8 +11,24 @@ import UIKit
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var todoTable: UITableView!
     
+    var items: [String] = []
+    
     func getTodoList() -> Array<Any> {
         return UserDefaults.standard.array(forKey: "todo") ?? []
+    }
+    
+    // sets number of table rows
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    // sets data in table cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
+        
+        cell.textLabel?.text = items[indexPath.row]
+        
+        return cell
     }
     
     // adding delete capability to table
@@ -23,34 +39,14 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // deletes data from table cell
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
-            // handle delete (by removing the data from your array and updating the tableview)
-            var currentTodoList = getTodoList()
+            // remove item from array
+            items.remove(at: indexPath.row)
             
-            currentTodoList.remove(at: indexPath.row)
+            // save array to defaults
+            UserDefaults.standard.set(items, forKey: "todo")
             
-            UserDefaults.standard.set(currentTodoList, forKey: "todo")
-            
+            // reload table
             todoTable.reloadData()       }
-    }
-    
-    // sets number of table rows
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let todoList = getTodoList()
-        
-        // Nil Coalescing
-        let count = todoList.count
-        
-        return count
-    }
-    
-    // sets data in table cell
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        let text = getTodoList()[indexPath.row]
-        
-        cell.textLabel?.text = text as? String
-        
-        return cell
     }
     
     // viewDidAppear method will be needed
@@ -58,6 +54,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,6 +63,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        if let tempItems = UserDefaults.standard.array(forKey: "todo") {
+            items = tempItems as! [String]
+        }
         
         todoTable.reloadData()
         
