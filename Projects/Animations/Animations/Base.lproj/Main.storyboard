@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYl-gF-QtY">
+                                <rect key="frame" x="171.5" y="323" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g6u-DV-1iM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame_00.gif" translatesAutoresizingMaskIntoConstraints="NO" id="T4M-2c-R2t">
+                                <rect key="frame" x="20" y="40" width="335" height="253"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="T4M-2c-R2t" secondAttribute="height" multiplier="187:141" id="J1a-gl-wXI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1R-id-YzX">
+                                <rect key="frame" x="170.5" y="373" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wyu-rg-Dvf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmd-Pj-NCp">
+                                <rect key="frame" x="162.5" y="433" width="50" height="30"/>
+                                <state key="normal" title="Slide In"/>
+                                <connections>
+                                    <action selector="slideIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Elg-ok-v9n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV7-Os-gcg">
+                                <rect key="frame" x="319" y="432" width="36" height="30"/>
+                                <state key="normal" title="Grow"/>
+                                <connections>
+                                    <action selector="grow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rAA-Lb-scy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8J-fZ-t0T">
+                                <rect key="frame" x="20" y="432" width="50" height="30"/>
+                                <state key="normal" title="Fade In"/>
+                                <connections>
+                                    <action selector="fadeIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d2b-hm-fuh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tmd-Pj-NCp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0lc-3c-Vhc"/>
+                            <constraint firstItem="lYl-gF-QtY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="31J-r2-nbs"/>
+                            <constraint firstItem="Tmd-Pj-NCp" firstAttribute="top" secondItem="H1R-id-YzX" secondAttribute="bottom" constant="30" id="Adw-dq-nxF"/>
+                            <constraint firstItem="H1R-id-YzX" firstAttribute="top" secondItem="lYl-gF-QtY" secondAttribute="bottom" constant="20" id="FL6-bH-kqd"/>
+                            <constraint firstItem="lYl-gF-QtY" firstAttribute="top" secondItem="T4M-2c-R2t" secondAttribute="bottom" constant="30" id="I11-gc-0ez"/>
+                            <constraint firstItem="W8J-fZ-t0T" firstAttribute="top" secondItem="H1R-id-YzX" secondAttribute="bottom" constant="29" id="O1R-VE-6Hs"/>
+                            <constraint firstItem="T4M-2c-R2t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Owr-LR-rIH"/>
+                            <constraint firstItem="H1R-id-YzX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WTC-Pd-ipa"/>
+                            <constraint firstItem="eV7-Os-gcg" firstAttribute="top" secondItem="H1R-id-YzX" secondAttribute="bottom" constant="29" id="bFZ-eO-Wt4"/>
+                            <constraint firstItem="T4M-2c-R2t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dAz-SA-L60"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eV7-Os-gcg" secondAttribute="trailing" constant="20" id="dFN-5t-69q"/>
+                            <constraint firstItem="W8J-fZ-t0T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vox-7a-HAm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T4M-2c-R2t" secondAttribute="trailing" constant="20" id="z8f-ls-hjj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="animateButton" destination="H1R-id-YzX" id="oWt-5D-Pqc"/>
+                        <outlet property="image" destination="T4M-2c-R2t" id="vCF-y3-GMc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="frame_00.gif" width="500" height="379"/>
+    </resources>
+</document>

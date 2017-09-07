@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:frame_00.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_01.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_02.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_03.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_04.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_05.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_06.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_07.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_08.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_09.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_10.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_11.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_12.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_13.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_14.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_15.gif">
+   </FileRef>
+   <FileRef
+      location = "group:frame_16.gif">
+   </FileRef>
+   <FileRef
+      location = "self:Animations.xcodeproj">
+   </FileRef>
+</Workspace>
